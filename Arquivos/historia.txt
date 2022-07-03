@@ -1,0 +1,3 @@
+O jogo da forca é para desvendar uma palavra oculta, você tera algumas dicas sobre a palavra e a quantidade de letras. Ótimo para aprender vocabulário, desenvolver a atenção, a lógica e a agilidade. 
+
+Sabendo dos beneficios desse jogo uma professora dividiu os alunos em duplas em um laboratório de informática, para que jogassem forca, apenas para estibular seu raciocínio lógico, por isso o jogo não conta com placar, não é o objetivo gerar competição.

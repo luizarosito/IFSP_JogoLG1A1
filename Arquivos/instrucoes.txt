@@ -1,0 +1,5 @@
+Instruções:
+
+- Deixe o capslook ativo
+
+- Quem escolhe as palavras fica responsável por digitar as letras que o colega tenta adivinhar, para que ele não visualize a palavra
