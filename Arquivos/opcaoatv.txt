@@ -1,0 +1,10 @@
+
+------------------------------------------------------------------
+
+1 > Pedro deu a opção de desenvolver uma atividade super simples para o curso, e sobraria tempo para organizar a aula.
+
+2 > Jaqueline falou para desenvolver um programa para os alunos aprenderam mais palavras, e usaria como atividade do curso.
+
+3 > Já Maria pensou em ensinar os alunos sobre programação, e juntos desenvolveriam a atividade.
+
+------------------------------------------------------------------

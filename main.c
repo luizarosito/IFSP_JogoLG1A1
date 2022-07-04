@@ -8,14 +8,14 @@ char palavrasecreta[TAMANHO_PALAVRA];
 char chutes[26];
 int chutesdados = 0;
 
-void abertura() { // Abertura do jogo
+void iniciojogo() { // Abertura do jogo
 
   printf("\n*** Bem vindo ao jogo da forca ***\n");
 
   printf("----------------------------------\n\n");
 }
 
-void beneficios() { // Ler o arquivo com narrativa
+void beneficios() { // Ler o arquivo com narrativa/história
   char historia[500];
 
   FILE *arquivo = fopen("Arquivos/historia.txt", "r");
@@ -30,6 +30,41 @@ void beneficios() { // Ler o arquivo com narrativa
   fclose(arquivo);
 
   printf(historia);
+  
+}
+
+void opcoes() {
+  
+  char atividades;
+
+  printf("\n\nVocê quer saber as sugestões dos amigos da Vânia? Digite V para visualizar ou S para sair: ");
+
+  scanf(" %c", &atividades);
+
+  if (atividades == 'V') {
+
+    char opcao[500];
+
+  FILE *arquivo = fopen("Arquivos/opcaoatv.txt", "r");
+
+  char atv;
+  int i = 0;
+  while ((atv = fgetc(arquivo)) != EOF) {
+    opcao[i] = atv;
+    i++;
+  }
+
+  fclose(arquivo);
+
+  printf(opcao);
+
+  }
+  else {
+
+      printf("Poxa, Vânia não terá ninguem para testar seu projeto\n\n");
+
+      exit(0);
+    }
 }
 
 int letraexiste(char letra) {
@@ -184,7 +219,7 @@ void adicionapalavra() {
 
   char quer;
 
-  printf("\n\nVocê quer adicionar uma palavra? (S/N) ");
+  printf("\n\nVocê quer adicionar uma palavra, para testar o jogo? (S/N) ");
 
   scanf(" %c", &quer);
 
@@ -192,7 +227,7 @@ void adicionapalavra() {
 
     char novapalavra[TAMANHO_PALAVRA];
 
-    printf("\nDigite a nova palavra: ");
+    printf("\nDigite a palavra teste: ");
 
     scanf("%s", novapalavra);
 
@@ -225,25 +260,69 @@ void adicionapalavra() {
 
   } else if (quer == 'N') {
 
-    printf("\nObrigado por jogar!\n");
+    printf("\nPoxa, Vânia terá que pedir para um de seus amigos testarem!\n");
 
   } else {
 
     printf("\nSelecione uma opção correta");
 
-    exit(0);
+    exit(1);
   }
 }
 
 
-void 
+void escolheratividade() {
 
+  int opcao;
+  
+  printf("\n\nTente adivinhar qual opção a professora Vânia escolheu: ");
+  scanf("%d", &opcao);
+
+  switch(opcao) {
+    case 1:
+        printf("\nA professora prefere fazer as atividades com mais dedicação. Por isso escolheu a opção 2 e desenvolveu um jogo.\n\n");
+    break;
+    case 2:
+        printf("\nParabéns! Você acertou. A professora pensou em desenvolver um jogo que os alunos amam.\n\n");
+    break;
+    case 3:
+        printf("\nEla não gostou, pois os alunos ficariam sem suas aulas. Por isso escolheu a opção 2 e desenvolveu um jogo.\n\n");
+    break;
+  default:
+    printf("Opção inválida");
+    
+  } 
+
+  printf("\nPor favor teste o jogo da professora Vânia e deixe sua avaliação no final.\n\n");
+}
+
+
+void avaliacao(){
+  
+ int avaliacao;
+
+  printf("\nDeixa uma avaliação de 1 a 10: ");
+
+  scanf("%d", &avaliacao);
+
+  FILE *arquivo;
+
+  arquivo = fopen("Arquivos/avaliacao.txt", "r+");
+
+  fprintf(arquivo, "\n%d", &avaliacao);
+
+  fclose(arquivo);
+}
 
 int main() {
 
-  abertura();
-
   beneficios();
+
+  opcoes();
+
+  escolheratividade();
+
+  iniciojogo();
 
   adicionapalavra();
 
@@ -267,6 +346,7 @@ int main() {
 
     printf("A palavra era **%s**\n\n", palavrasecreta);
   }
-
-  adicionapalavra();
+  
+  avaliacao();
 }
+  

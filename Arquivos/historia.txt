@@ -1,3 +1,7 @@
-O jogo da forca é para desvendar uma palavra oculta, você tera algumas dicas sobre a palavra e a quantidade de letras. Ótimo para aprender vocabulário, desenvolver a atenção, a lógica e a agilidade. 
+-------------------------------------------------------------------
 
-Sabendo dos beneficios desse jogo uma professora dividiu os alunos em duplas em um laboratório de informática, para que jogassem forca, apenas para estibular seu raciocínio lógico, por isso o jogo não conta com placar, não é o objetivo gerar competição.
+ A professora Vânia precisa de uma pessoa para testar seu projeto, mas para realizar o testo você precisa conhecer a história dela. 
+
+-------------------------------------------------------------------
+
+  A professora Vânia, que da aula para alunos do 4º ano está buscando aprender sobre programação, e deciciu fazer um curso sobre linguagem C para iniciar seus estudos, mas sua rotina está muito corrida e ela está com dificuldade em preparar suas aulas e fazer uma atividade para o curso, e decidiu compartilhar com os amigos afim de obter ajuda. 

@@ -10,3 +10,4 @@ int ganhou();
 void desenhaforca();
 void escolhepalavra();
 void adicionapalavra();
+void avaliacao();
